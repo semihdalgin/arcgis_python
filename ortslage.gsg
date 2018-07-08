@@ -1,0 +1,35 @@
+# Signatures Produced by ClassSig from 
+#    Class-Grid __1000001
+#    and Stack __1000000
+
+#    Number of selected grids
+/*           3
+#    Layer-Number    Band-name
+/*           1       LK_Heidekreis_ortslage.png\Band_1
+/*           2       LK_Heidekreis_ortslage.png\Band_2
+/*           3       LK_Heidekreis_ortslage.png\Band_3
+
+#  Type   Number of Classes   Number of Layers    Number of Parametric Layers
+    1             2                  3                         3
+# ===================================================================
+
+#  Class ID     Number of Cells    Class Name
+        1             65231         1
+# Layers             1             2             3
+# Means    
+            0,000000e+000 0,000000e+000 0,000000e+000
+# Covariance
+    1       0,000000e+000 0,000000e+000 0,000000e+000
+    2       0,000000e+000 0,000000e+000 0,000000e+000
+    3       0,000000e+000 0,000000e+000 0,000000e+000
+# -------------------------------------------------------------------
+
+#  Class ID     Number of Cells    Class Name
+        2              5721         2
+# Layers             1             2             3
+# Means    
+            2,550000e+002 1,890007e+002 1,412514e+002
+# Covariance
+    1       0,000000e+000 0,000000e+000 5,210196e-012
+    2       0,000000e+000 6,988118e-004 -9,473127e-007
+    3       5,210196e-012 -9,473127e-007 1,882084e-001

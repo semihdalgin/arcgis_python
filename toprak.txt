@@ -1,0 +1,42 @@
+import arcpy
+arcpy.env.workspace = "V:\\3-CALISMALAR\\01_SEMIH\\00_TOPRAK_KAYNAKLARI\\MDB"
+arcpy.ExcelToTable_conversion("liste.xlsx", "outgdb.gdb", "1")
+featureClass = r"V:\3-CALISMALAR\01_SEMIH\00_TOPRAK_KAYNAKLARI\MDB\outgdb.dbf"
+rows = arcpy.SearchCursor(featureClass)
+row = rows.next()
+for semsem in range (1,3,1):
+     row=rows.next()
+     exname=row.AD + ".mdb"
+     exfold=r'V:\3-CALISMALAR\01_SEMIH\00_TOPRAK_KAYNAKLARI\MDB'
+     arcpy.CreateFileGDB_management(exfold,exname)
+
+for semsem in range (1,101,1):
+...      row=rows.next()
+...      exname=row.AD + ".mdb"
+...      exfold=r'V:\3-CALISMALAR\01_SEMIH\00_TOPRAK_KAYNAKLARI\MDB3\Kopyalanan'
+...      output=exfold+ "\\"+exname
+...      arcpy.FeatureClassToFeatureClass_conversion("Arazi_Katmani",output,"Arazi_Katmani")
+
+
+
+arcpy.Append_management("","","NO_TEST")
+
+
+for semsem in range (1,101,1):
+...     row=rows.next()
+...     exname=row.AD+ ".mdb"
+...     first="D:\\TOPRAK\\1"
+...     second="D:\\TOPRAK\\2"
+...     out1=first+"\\"+exname+"\\Arazi_Katmani"
+...     out2=second+"\\"+exname+"\\Arazi_Katmani"
+...     out3=first+"\\"+exname+"\\Bunye_Katmani"
+...     out4=second+"\\"+exname+"\\Bunye_Katmani"
+...     out5=first+"\\"+exname+"\\Drenaj_Katmani"
+...     out6=second+"\\"+exname+"\\Drenaj_Katmani"
+...     if arcpy.Exists(out2):
+...         arcpy.Append_management(out2,out1,"NO_TEST")
+...     if arcpy.Exists(out4):
+...         arcpy.Append_management(out4,out3,"NO_TEST")
+...     if arcpy.Exists(out6):
+...         arcpy.Append_management(out6,out5,"NO_TEST")
+
