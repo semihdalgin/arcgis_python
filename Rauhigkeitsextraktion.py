@@ -2,11 +2,6 @@
 # Name:        Extract Roughness polygons
 # Purpose:     Extract Roughness polygons
 #
-# Author:      LerchM
-#
-# Created:     30.04.2015
-# Changed:     09.07.2015
-# Licence:     PNE Wind AG internal
 #-------------------------------------------------------------------------------
 
 #Arcpy importieren
